@@ -1472,9 +1472,11 @@ export default function AdminPanel({ isAdminLoggedIn }: AdminPanelProps) {
                         <div>
                           <h4 className="text-xs font-bold text-primary uppercase tracking-wide">
                             {job.jobTitle}
-                            <span className="ml-2 text-[9px] font-mono text-gray-400 normal-case tracking-normal">
-                              {job.organisation ? `${job.organisation} • ` : ''}{job.jobType}
-                            </span>
+                            {job.organisation && (
+                              <span className="ml-2 text-[9px] font-mono text-gray-400 normal-case tracking-normal">
+                                {job.organisation}
+                              </span>
+                            )}
                           </h4>
                           <span className="text-[9px] text-gray-400 font-mono">Ref: {job.id} • {job.date}</span>
                         </div>
@@ -1504,11 +1506,9 @@ export default function AdminPanel({ isAdminLoggedIn }: AdminPanelProps) {
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs text-gray-600">
-                        <p><span className="font-bold text-primary uppercase text-[10px] tracking-wide inline-block w-28">Location:</span> {job.location || '—'}</p>
                         <p><span className="font-bold text-primary uppercase text-[10px] tracking-wide inline-block w-28">Salary:</span> {job.salary || '—'}</p>
                         <p><span className="font-bold text-primary uppercase text-[10px] tracking-wide inline-block w-28">Contact:</span> {job.contactPerson || '—'}</p>
                         <p><span className="font-bold text-primary uppercase text-[10px] tracking-wide inline-block w-28">Phone:</span> {job.contactPhone || '—'}</p>
-                        <p><span className="font-bold text-primary uppercase text-[10px] tracking-wide inline-block w-28">Email:</span> {job.contactEmail || '—'}</p>
                       </div>
 
                       {job.description && (

@@ -223,13 +223,10 @@ create table job_openings (
   id              uuid primary key default gen_random_uuid(),
   "jobTitle"      text not null,
   organisation    text not null default '',
-  "jobType"       text not null default 'full-time',
-  location        text not null default '',
   description     text not null default '',
   salary          text not null default '',
   "contactPerson" text not null default '',
   "contactPhone"  text not null default '',
-  "contactEmail"  text not null default '',
   status          text not null default 'Open',
   date            date not null default current_date,
   "createdAt"     timestamptz not null default now()

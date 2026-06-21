@@ -145,13 +145,10 @@ export interface JobOpening {
   id: string;
   jobTitle: string;
   organisation: string;
-  jobType: 'full-time' | 'part-time' | 'contract' | 'temporary' | 'internship';
-  location: string;
   description: string;
   salary: string;
   contactPerson: string;
   contactPhone: string;
-  contactEmail: string;
   status: 'Open' | 'Closed';
   date: string;
 }

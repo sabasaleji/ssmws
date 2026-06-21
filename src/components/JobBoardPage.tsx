@@ -1,27 +1,17 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../i18n';
 import { useStore } from '../dbState';
-import { VILLAGES } from '../villages';
-import { JobOpening } from '../types';
 import {
-  Briefcase, MapPin, Phone, MessageCircle, Mail, Building2,
-  Clock, Banknote, Plus, X, Check, ShieldAlert
+  Briefcase, Phone, MessageCircle, Building2,
+  Banknote, Plus, X, Check, ShieldAlert
 } from 'lucide-react';
 
 // Build a wa.me link from a free-text phone number (strip everything but digits,
 // the same approach the Footer/Contact page use for the office WhatsApp).
 const waLink = (phone: string) => `https://wa.me/${phone.replace(/[^0-9]/g, '')}`;
 
-const jobTypeKey: Record<JobOpening['jobType'], string> = {
-  'full-time': 'jobTypeFullTime',
-  'part-time': 'jobTypePartTime',
-  'contract': 'jobTypeContract',
-  'temporary': 'jobTypeTemporary',
-  'internship': 'jobTypeInternship',
-};
-
 export default function JobBoardPage() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const store = useStore();
 
   // Only ever show live ('Open') postings — admins also load 'Closed' rows.
@@ -31,14 +21,10 @@ export default function JobBoardPage() {
 
   const [jobTitle, setJobTitle] = useState('');
   const [organisation, setOrganisation] = useState('');
-  const [jobType, setJobType] = useState<JobOpening['jobType']>('full-time');
-  const [locationSelect, setLocationSelect] = useState('');
-  const [locationOther, setLocationOther] = useState('');
   const [description, setDescription] = useState('');
   const [salary, setSalary] = useState('');
   const [contactPerson, setContactPerson] = useState('');
   const [contactPhone, setContactPhone] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
 
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -46,30 +32,22 @@ export default function JobBoardPage() {
   const resetForm = () => {
     setJobTitle('');
     setOrganisation('');
-    setJobType('full-time');
-    setLocationSelect('');
-    setLocationOther('');
     setDescription('');
     setSalary('');
     setContactPerson('');
     setContactPhone('');
-    setContactEmail('');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    const location = locationSelect === 'other' ? locationOther : locationSelect;
     await store.addJobOpening({
       jobTitle,
       organisation,
-      jobType,
-      location,
       description,
       salary,
       contactPerson,
       contactPhone,
-      contactEmail,
     });
     setSubmitting(false);
     resetForm();
@@ -137,44 +115,11 @@ export default function JobBoardPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                <div>
-                  <label className={labelClass}>{t('jobFormType')}*</label>
-                  <select className={inputClass} value={jobType}
-                    onChange={e => setJobType(e.target.value as JobOpening['jobType'])}>
-                    <option value="full-time">{t('jobTypeFullTime')}</option>
-                    <option value="part-time">{t('jobTypePartTime')}</option>
-                    <option value="contract">{t('jobTypeContract')}</option>
-                    <option value="temporary">{t('jobTypeTemporary')}</option>
-                    <option value="internship">{t('jobTypeInternship')}</option>
-                  </select>
-                </div>
-                <div>
-                  <label className={labelClass}>{t('jobFormLocation')}</label>
-                  <select className={inputClass} value={locationSelect}
-                    onChange={e => setLocationSelect(e.target.value)}>
-                    <option value="">{t('jobFormSelectLocation')}</option>
-                    {VILLAGES.map(v => (
-                      <option key={v.id} value={v.en}>{language === 'gu' ? v.gu : v.en}</option>
-                    ))}
-                    <option value="other">{t('jobFormLocationOther')}</option>
-                  </select>
-                </div>
-                <div>
-                  <label className={labelClass}>{t('jobFormSalary')}</label>
-                  <input type="text" className={inputClass} placeholder={t('jobFormSalaryPlaceholder')}
-                    value={salary} onChange={e => setSalary(e.target.value)} />
-                </div>
+              <div>
+                <label className={labelClass}>{t('jobFormSalary')}</label>
+                <input type="text" className={inputClass} placeholder={t('jobFormSalaryPlaceholder')}
+                  value={salary} onChange={e => setSalary(e.target.value)} />
               </div>
-
-              {locationSelect === 'other' && (
-                <div>
-                  <label className={labelClass}>{t('jobFormLocationOtherLabel')}</label>
-                  <input type="text" className={inputClass}
-                    placeholder={t('jobFormLocationOtherLabel')}
-                    value={locationOther} onChange={e => setLocationOther(e.target.value)} />
-                </div>
-              )}
 
               <div>
                 <label className={labelClass}>{t('jobFormDescription')}</label>
@@ -186,7 +131,7 @@ export default function JobBoardPage() {
               <h3 className="text-xs font-bold text-primary uppercase tracking-[0.15em] border-b pb-2 font-display pt-2">
                 {t('jobCardContact')}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className={labelClass}>{t('jobFormContactPerson')}</label>
                   <input type="text" className={inputClass}
@@ -197,11 +142,6 @@ export default function JobBoardPage() {
                   <input id="job-inp-phone" type="tel" required className={inputClass}
                     placeholder="+91 XXXXX-XXXXX"
                     value={contactPhone} onChange={e => setContactPhone(e.target.value)} />
-                </div>
-                <div>
-                  <label className={labelClass}>{t('jobFormContactEmail')}</label>
-                  <input type="email" className={inputClass} placeholder="name@email.com"
-                    value={contactEmail} onChange={e => setContactEmail(e.target.value)} />
                 </div>
               </div>
 
@@ -240,30 +180,22 @@ export default function JobBoardPage() {
             {openJobs.map(job => (
               <div key={job.id} className="border border-gray-100 bg-white rounded-none shadow-sm hover:border-gold transition-colors duration-150 flex flex-col">
                 <div className="p-6 space-y-4 flex-grow">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="space-y-1">
-                      <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary font-display leading-snug">
-                        {job.jobTitle}
-                      </h3>
-                      {job.organisation && (
-                        <p className="text-[11px] text-gray-500 font-serif flex items-center gap-1.5">
-                          <Building2 className="h-3.5 w-3.5 text-gold" /> {job.organisation}
-                        </p>
-                      )}
-                    </div>
-                    <span className="text-[9px] uppercase font-bold text-gold bg-[#FCFAF7] border border-gray-100 px-2.5 py-1 rounded-none font-mono whitespace-nowrap flex items-center gap-1">
-                      <Clock className="h-3 w-3" /> {t(jobTypeKey[job.jobType] as Parameters<typeof t>[0])}
-                    </span>
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-extrabold uppercase tracking-wide text-primary font-display leading-snug">
+                      {job.jobTitle}
+                    </h3>
+                    {job.organisation && (
+                      <p className="text-[11px] text-gray-500 font-serif flex items-center gap-1.5">
+                        <Building2 className="h-3.5 w-3.5 text-gold" /> {job.organisation}
+                      </p>
+                    )}
                   </div>
 
-                  <div className="flex flex-wrap gap-x-5 gap-y-1.5 text-[11px] text-gray-500 font-mono">
-                    {job.location && (
-                      <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-gold" /> {job.location}</span>
-                    )}
-                    {job.salary && (
+                  {job.salary && (
+                    <div className="text-[11px] text-gray-500 font-mono">
                       <span className="flex items-center gap-1.5"><Banknote className="h-3.5 w-3.5 text-gold" /> {job.salary}</span>
-                    )}
-                  </div>
+                    </div>
+                  )}
 
                   {job.description && (
                     <p className="text-xs text-gray-600 font-serif leading-relaxed whitespace-pre-line border-l-2 border-gold/40 pl-3">
@@ -296,14 +228,6 @@ export default function JobBoardPage() {
                           <MessageCircle className="h-3.5 w-3.5" /> {t('jobCardWhatsApp')}
                         </a>
                       </>
-                    )}
-                    {job.contactEmail && (
-                      <a
-                        href={`mailto:${job.contactEmail}`}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2 border border-gray-200 bg-white hover:border-gold text-primary text-[10px] font-bold uppercase tracking-wider cursor-pointer transition-colors"
-                      >
-                        <Mail className="h-3.5 w-3.5 text-gold" /> {t('jobCardEmail')}
-                      </a>
                     )}
                   </div>
                 </div>
