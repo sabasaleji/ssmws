@@ -1,0 +1,67 @@
+Website Planning Document
+Sabargata Sunni Momin Welfare Society
+This document outlines the recommended structure, features, and design ideas for the official website of Sabargata Sunni Momin Welfare Society.
+1. Home Page
+•	Society logo and tagline
+•	Banner with community service photos
+•	Quick action buttons: Donate, Become Member, Apply for Help, Contact Us
+•	Sections for About, Activities, Events, Gallery, and Community Statistics
+2. About Us
+•	History of the society
+•	Vision and Mission
+•	Founder details
+•	Trust registration information
+•	Major achievements timeline
+3. Trustees / Committee Members
+•	Photos and details of President, Trustees, Secretary, Treasurer, and committee members
+•	Short introduction and designation for each member
+4. Welfare Activities
+•	Education Support
+•	Medical Help
+•	Marriage Assistance
+•	Relief Work
+•	Employment & Skill Development
+5. Donation Section
+•	UPI QR code and bank details
+•	Online payment gateway
+•	Donation categories
+•	Transparency through receipts and reports
+6. Membership / Join Us
+•	Membership registration form
+•	Volunteer registration
+•	Youth participation section
+7. Help Request Section
+•	Forms for educational, medical, and emergency assistance requests
+8. News & Announcements
+•	Event notices
+•	Scholarship updates
+•	Community announcements
+•	Festival greetings
+9. Photo & Video Gallery
+•	Albums of welfare activities, events, and community programs
+10. Contact Page
+•	Office address
+•	Google Maps integration
+•	Contact numbers and email
+•	WhatsApp contact button
+11. Languages
+•	Gujarati and English language support
+12. Professional Features
+•	Mobile-friendly design
+•	Admin panel for updates
+•	Future member login system
+13. Recommended Design Style
+•	Elegant and trustworthy color scheme
+•	Dark Green, White, Gold accents
+•	Clean and modern layout
+14. Social Media Integration
+•	Instagram
+•	Facebook
+•	YouTube
+•	WhatsApp Channel
+15. Technical Recommendation
+•	Use WordPress for easy management and updates
+16. Community Achievement Section
+•	Highlight achievers such as Doctors, Engineers, CA, Government Officers, Toppers, and Entrepreneurs
+
+The website should reflect transparency, professionalism, community service, and modern communication while remaining simple and accessible for all users.

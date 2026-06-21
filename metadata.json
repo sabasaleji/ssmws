@@ -1,0 +1,6 @@
+{
+  "name": "Sabarkantha Sunni Momin Welfare Society",
+  "description": "A highly professional, transparent, and modern community welfare platform helping Sunni Momin families through education, medical aid, marriage assistance, relief work, and registrations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
