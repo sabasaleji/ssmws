@@ -7,14 +7,18 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-display: "Space Grotesk", "Inter", sans-serif;
   
-  --color-primary: #064E3B;
-  --color-primary-dark: #043327;
-  --color-gold: #D4AF37;
+  /* Brand palette sampled directly from the SSMWS logo:
+     navy #002552 (hands + wordmark), green #286431 (figures), gold #D29B02 (figures + rule). */
+  --color-primary: #002552;
+  --color-primary-dark: #001A3D;
+  --color-gold: #D29B02;
+  --color-green: #286431;
+  --color-green-dark: #1E4D26;
   --color-bg-warm: #FCFAF7;
-  --color-text-dark: #1A2E26;
-  
-  --shadow-gold: 0 10px 15px -3px rgba(212, 175, 55, 0.15), 0 4px 6px -4px rgba(212, 175, 55, 0.15);
-  --shadow-primary: 0 10px 15px -3px rgba(6, 78, 59, 0.15), 0 4px 6px -4px rgba(6, 78, 59, 0.15);
+  --color-text-dark: #0F2138;
+
+  --shadow-gold: 0 10px 15px -3px rgba(210, 155, 2, 0.18), 0 4px 6px -4px rgba(210, 155, 2, 0.18);
+  --shadow-primary: 0 10px 15px -3px rgba(0, 37, 82, 0.18), 0 4px 6px -4px rgba(0, 37, 82, 0.18);
 }
 
 body {

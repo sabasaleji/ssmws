@@ -28,14 +28,14 @@ export default function NewsPage() {
             }`}>
               
               {ann.important && (
-                <div className="absolute top-4 right-4 text-[#D4AF37] flex items-center gap-1 font-bold text-[9px] uppercase font-mono bg-primary px-2.5 py-1">
+                <div className="absolute top-4 right-4 text-[#D29B02] flex items-center gap-1 font-bold text-[9px] uppercase font-mono bg-primary px-2.5 py-1">
                   <Pin className="h-3 w-3 fill-gold" /> Urgent Circular
                 </div>
               )}
 
               <div className="space-y-4">
                 <div className="space-y-1">
-                  <span className="text-[9px] text-[#D4AF37] font-mono tracking-wider block uppercase font-bold">
+                  <span className="text-[9px] text-[#D29B02] font-mono tracking-wider block uppercase font-bold">
                     Posted on {ann.date} • Category: {ann.category}
                   </span>
                   

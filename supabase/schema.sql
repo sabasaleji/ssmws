@@ -158,6 +158,7 @@ create table memberships (
   dob                 text not null default '',
   gender              text not null default 'male',
   "bloodGroup"        text,
+  "membershipType"    text not null default 'annual',
   status              text not null default 'Pending',
   date                date not null default current_date,
   "createdAt"         timestamptz not null default now()

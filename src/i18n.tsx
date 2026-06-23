@@ -127,11 +127,13 @@ export const translations = {
 
     // Membership Page Specific
     membershipTitle: "Join the Welfare Movement",
-    membershipSubtitle: "Register as a registered member, sign up as a voluntary community worker, or join the Youth wing.",
+    membershipSubtitle: "Register as an official member of the welfare society.",
     membTabForm: "Official Registry Form",
-    membTabVolunteer: "Volunteer Application",
-    membYouthTitle: "SSMWS Youth Wing",
-    membYouthDesc: "Empowering the younger generation through design workshops, blood donation camps, athletic leagues, and local guidance seminars.",
+    membTypeLabel: "Membership Type",
+    membTypeAnnual: "Annual Membership",
+    membTypeLifetime: "Lifetime Membership",
+    membTypeAnnualPrice: "₹100 / year",
+    membTypeLifetimePrice: "₹2,500 one-time",
 
 
     // Achievers Page
@@ -253,7 +255,37 @@ export const translations = {
     // Admin — Job board
     adminJobBoardTitle: "Job Board Postings",
     adminJobBoardSubtitle: "Openings posted by the community. They go live immediately — close or delete anything spam, fake, or inappropriate.",
-    adminNoJobs: "No job openings have been posted yet."
+    adminNoJobs: "No job openings have been posted yet.",
+
+    // Mock Board Exam (annual education activity)
+    mockBoardNav: "Mock Board Exam",
+    mockBoardEyebrow: "Annual Welfare Activity",
+    mockBoardTitleLead: "Mock Board",
+    mockBoardTitleAccent: "Examination",
+    mockBoardSubtitle: "A free annual preparation drive that puts our community's 10th-grade students through a full rehearsal of the SSC board examination — real paper, real hall, real timing — so the actual exam holds no surprises.",
+    mockBoardAboutTitle: "About the Programme",
+    mockBoardAboutP1: "Every year, just before the SSC (10th standard) board examinations, the Sabarkantha Sunni Momin Welfare Society organises a full Mock Board Exam for the students of our community. The mock exam is held at Ashish Vidhyalay, where students sit a complete, exam-style test under the very same conditions they will face on the real board exam day.",
+    mockBoardAboutP2: "The idea is simple: by the time the real board exam arrives, every student has already lived through the experience once. They know how to manage the clock, how to handle the question paper, and how to walk into the examination hall with confidence instead of fear.",
+    mockBoardFactWhoLabel: "Who Can Attend",
+    mockBoardFactWhoValue: "Community students appearing for the 10th-grade (SSC) board exam",
+    mockBoardFactWhenLabel: "When",
+    mockBoardFactWhenValue: "Every year, a few weeks before the board exams",
+    mockBoardFactWhereLabel: "Venue",
+    mockBoardFactWhereValue: "Ashish Vidhyalay, Sabarkantha",
+    mockBoardFactFeeLabel: "Fee",
+    mockBoardFactFeeValue: "Completely free for the community",
+    mockBoardWhyTitle: "Why We Do It",
+    mockBoardWhy1: "Removes exam fear — students face the pressure once in a safe setting, well before the real day.",
+    mockBoardWhy2: "Builds time management — practising the full paper within the official board time limit.",
+    mockBoardWhy4: "Real exam-hall experience — answer sheets, seating, and invigilation just like the actual board.",
+    mockBoardWhy5: "Confidence on the real day — familiarity turns nervous students into prepared ones.",
+    mockBoardHowTitle: "How It Works",
+    mockBoardStep1Title: "Registration",
+    mockBoardStep1Desc: "Students from the community enrol through the welfare society before the mock exam dates are announced.",
+    mockBoardStep2Title: "Exam Day at Ashish Vidhyalay",
+    mockBoardStep2Desc: "Students appear for a full-length paper at Ashish Vidhyalay under real board-exam conditions, seating, and timing.",
+    mockBoardStep3Title: "Evaluation & Feedback",
+    mockBoardStep3Desc: "Answer sheets are checked and each student receives feedback on where they stand and what to improve."
   },
   gu: {
     // Nav & Common
@@ -379,11 +411,13 @@ export const translations = {
 
     // Membership Page Specific
     membershipTitle: "સોસાયટી સભ્યપદ ઝુંબેશ",
-    membershipSubtitle: "અધિકૃત સભ્ય તરીકે નોંધણી કરાવો, સ્વયંસેવક સામાજિક કાર્યકર બનો અથવા યુવા વિંગમાં જોડાઓ.",
+    membershipSubtitle: "કલ્યાણ સોસાયટીના અધિકૃત સભ્ય તરીકે નોંધણી કરાવો.",
     membTabForm: "સભ્યપદ ફોર્મ",
-    membTabVolunteer: "સ્વયંસેવક અરજી",
-    membYouthTitle: "SSMWS યુવા વિંગ",
-    membYouthDesc: "યુવા પેઢીને ડિઝાઇન વર્કશોપ, બ્લડ ડોનેશન કેમ્પ, રમતગમત સ્પર્ધાઓ અને માર્ગદર્શન સેમિનાર દ્વારા સક્ષમ બનાવવી.",
+    membTypeLabel: "સભ્યપદનો પ્રકાર",
+    membTypeAnnual: "વાર્ષિક સભ્યપદ",
+    membTypeLifetime: "આજીવન સભ્યપદ",
+    membTypeAnnualPrice: "₹૧૦૦ / વર્ષ",
+    membTypeLifetimePrice: "₹૨,૫૦૦ એક વખત",
 
 
     // Achievers Page
@@ -505,7 +539,37 @@ export const translations = {
     // Admin — Job board
     adminJobBoardTitle: "રોજગાર બોર્ડ જાહેરાતો",
     adminJobBoardSubtitle: "જ્ઞાતિ દ્વારા મૂકાયેલ ખાલી જગ્યાઓ. તે તરત જ લાઈવ થાય છે — સ્પામ, ખોટી કે અયોગ્ય જાહેરાત બંધ કરો અથવા કાઢી નાખો.",
-    adminNoJobs: "હજુ સુધી કોઈ નોકરીની જાહેરાત મૂકાઈ નથી."
+    adminNoJobs: "હજુ સુધી કોઈ નોકરીની જાહેરાત મૂકાઈ નથી.",
+
+    // Mock Board Exam (વાર્ષિક શૈક્ષણિક પ્રવૃત્તિ)
+    mockBoardNav: "મોક બોર્ડ પરીક્ષા",
+    mockBoardEyebrow: "વાર્ષિક કલ્યાણ પ્રવૃત્તિ",
+    mockBoardTitleLead: "મોક બોર્ડ",
+    mockBoardTitleAccent: "પરીક્ષા",
+    mockBoardSubtitle: "આપણા સમાજના ધોરણ ૧૦ ના વિદ્યાર્થીઓ માટે દર વર્ષે યોજાતી નિઃશુલ્ક તૈયારી ઝુંબેશ — અસલી પ્રશ્નપત્ર, અસલી પરીક્ષા હોલ અને અસલી સમય સાથે એસએસસી બોર્ડ પરીક્ષાનું સંપૂર્ણ રિહર્સલ, જેથી ખરી પરીક્ષામાં કોઈ ડર ન રહે.",
+    mockBoardAboutTitle: "કાર્યક્રમ વિશે",
+    mockBoardAboutP1: "દર વર્ષે, એસએસસી (ધોરણ ૧૦) બોર્ડ પરીક્ષાની બરાબર પહેલાં, સાબરકાંઠા સુન્ની મોમીન વેલ્ફેર સોસાયટી આપણા સમાજના વિદ્યાર્થીઓ માટે સંપૂર્ણ મોક બોર્ડ પરીક્ષાનું આયોજન કરે છે. આ મોક પરીક્ષા Ashish Vidhyalay ખાતે યોજાય છે, જ્યાં વિદ્યાર્થીઓ ખરી બોર્ડ પરીક્ષાના દિવસ જેવી જ પરિસ્થિતિમાં સંપૂર્ણ પરીક્ષા આપે છે.",
+    mockBoardAboutP2: "ઉદ્દેશ સ્પષ્ટ છે: ખરી બોર્ડ પરીક્ષા આવે ત્યાં સુધીમાં દરેક વિદ્યાર્થી આ અનુભવ એક વાર જીવી ચૂક્યો હોય. તેઓ સમયનું વ્યવસ્થાપન, પ્રશ્નપત્ર કેવી રીતે હાથ ધરવું અને ડરને બદલે આત્મવિશ્વાસ સાથે પરીક્ષા હોલમાં કેવી રીતે પ્રવેશવું તે જાણતા હોય.",
+    mockBoardFactWhoLabel: "કોણ ભાગ લઈ શકે",
+    mockBoardFactWhoValue: "ધોરણ ૧૦ (એસએસસી) બોર્ડ પરીક્ષા આપનાર સમાજના વિદ્યાર્થીઓ",
+    mockBoardFactWhenLabel: "ક્યારે",
+    mockBoardFactWhenValue: "દર વર્ષે, બોર્ડ પરીક્ષાના થોડા અઠવાડિયા પહેલાં",
+    mockBoardFactWhereLabel: "સ્થળ",
+    mockBoardFactWhereValue: "Ashish Vidhyalay, સાબરકાંઠા",
+    mockBoardFactFeeLabel: "ફી",
+    mockBoardFactFeeValue: "સમાજ માટે સંપૂર્ણ નિઃશુલ્ક",
+    mockBoardWhyTitle: "અમે આ શા માટે કરીએ છીએ",
+    mockBoardWhy1: "પરીક્ષાનો ડર દૂર કરે — વિદ્યાર્થીઓ ખરા દિવસ ઘણા પહેલાં સુરક્ષિત વાતાવરણમાં એક વાર દબાણનો સામનો કરે.",
+    mockBoardWhy2: "સમય વ્યવસ્થાપન કેળવે — અધિકૃત બોર્ડ સમય મર્યાદામાં સંપૂર્ણ પ્રશ્નપત્ર ઉકેલવાની પ્રેક્ટિસ.",
+    mockBoardWhy4: "અસલી પરીક્ષા હોલનો અનુભવ — ઉત્તરવહી, બેઠક અને નિરીક્ષણ ખરા બોર્ડ જેવી જ રીતે.",
+    mockBoardWhy5: "ખરા દિવસે આત્મવિશ્વાસ — પરિચિતતા ગભરાયેલા વિદ્યાર્થીને તૈયાર વિદ્યાર્થી બનાવે.",
+    mockBoardHowTitle: "આ કેવી રીતે ચાલે છે",
+    mockBoardStep1Title: "નોંધણી",
+    mockBoardStep1Desc: "મોક પરીક્ષાની તારીખ જાહેર થાય તે પહેલાં સમાજના વિદ્યાર્થીઓ વેલ્ફેર સોસાયટી મારફતે નોંધણી કરાવે છે.",
+    mockBoardStep2Title: "Ashish Vidhyalay ખાતે પરીક્ષાનો દિવસ",
+    mockBoardStep2Desc: "વિદ્યાર્થીઓ Ashish Vidhyalay ખાતે અસલી બોર્ડ પરીક્ષાની પરિસ્થિતિ, બેઠક અને સમય સાથે સંપૂર્ણ પ્રશ્નપત્ર આપે છે.",
+    mockBoardStep3Title: "મૂલ્યાંકન અને માર્ગદર્શન",
+    mockBoardStep3Desc: "ઉત્તરવહીઓ તપાસવામાં આવે છે અને દરેક વિદ્યાર્થીને તેઓ ક્યાં ઊભા છે અને શું સુધારવું તે અંગે માર્ગદર્શન મળે છે."
   }
 };
 

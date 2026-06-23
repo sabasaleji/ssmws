@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../i18n';
 import { useStore } from '../dbState';
 import {
-  Briefcase, Phone, MessageCircle, Building2,
+  Briefcase, MessageCircle, Building2,
   Banknote, Plus, X, Check, ShieldAlert
 } from 'lucide-react';
 
@@ -212,22 +212,14 @@ export default function JobBoardPage() {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {job.contactPhone && (
-                      <>
-                        <a
-                          href={`tel:${job.contactPhone}`}
-                          className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-primary hover:bg-primary-dark text-white text-[10px] font-bold uppercase tracking-wider cursor-pointer transition-colors"
-                        >
-                          <Phone className="h-3.5 w-3.5" /> {t('jobCardCall')}
-                        </a>
-                        <a
-                          href={waLink(job.contactPhone)}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider cursor-pointer transition-colors"
-                        >
-                          <MessageCircle className="h-3.5 w-3.5" /> {t('jobCardWhatsApp')}
-                        </a>
-                      </>
+                      <a
+                        href={waLink(job.contactPhone)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider cursor-pointer transition-colors"
+                      >
+                        <MessageCircle className="h-3.5 w-3.5" /> {t('jobCardWhatsApp')}
+                      </a>
                     )}
                   </div>
                 </div>

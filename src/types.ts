@@ -104,6 +104,7 @@ export interface MembershipApplication {
   dob: string;
   gender: 'male' | 'female';
   bloodGroup?: string;
+  membershipType: 'annual' | 'lifetime';
   status: 'Pending' | 'Approved' | 'Rejected';
   date: string;
 }

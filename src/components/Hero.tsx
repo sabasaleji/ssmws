@@ -1,15 +1,12 @@
 import { useLanguage } from '../i18n';
-import { useStore } from '../dbState';
-import { Heart, GraduationCap, ArrowRight } from 'lucide-react';
-import heroImg from '../assets/images/welfare_hero_1780513934403.png';
+import { Heart } from 'lucide-react';
 
 interface HeroProps {
   setTab: (tab: string) => void;
 }
 
 export default function Hero({ setTab }: HeroProps) {
-  const { t, language } = useLanguage();
-  const { activities } = useStore();
+  const { language } = useLanguage();
 
   const handleApplyCTA = (tab: string) => {
     setTab(tab);
@@ -17,56 +14,7 @@ export default function Hero({ setTab }: HeroProps) {
   };
 
   return (
-    <div className="space-y-20 pb-20 font-sans bg-bg-warm">
-      
-      {/* 4. ACTIVE WELFARE PREVIEWS (Gorgeous structured boxes with deep emerald/gold) */}
-      <section className="bg-primary-dark text-white py-20 relative">
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `url(${heroImg})`, backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay' }}></div>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative space-y-12">
-          
-          <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-xs uppercase font-bold text-gold tracking-[0.3em] block">{t('activities')}</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-display uppercase">
-              {t('activityTitle')}
-            </h2>
-            <p className="text-xs text-gray-300 font-serif">
-              {t('activitySubtitle')}
-            </p>
-            <div className="h-1 w-16 bg-gold mx-auto mt-2"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {activities.slice(0, 3).map(activity => (
-              <div key={activity.id} className="p-8 bg-primary/40 border border-gold/10 rounded-sm space-y-5 hover:border-gold/50 hover:bg-primary/60 transition-all duration-300">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-sm bg-primary-dark border border-gold/20 text-gold">
-                    <GraduationCap className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-sm font-extrabold text-white uppercase tracking-wider">{language === 'en' ? activity.title : activity.title_gu}</h3>
-                </div>
-                <p className="text-xs text-gray-300 leading-relaxed font-serif">
-                  {language === 'en' ? activity.description.slice(0, 150) + '...' : activity.description_gu.slice(0, 110) + '...'}
-                </p>
-                <div className="pt-2">
-                  <span className="text-[11px] font-bold text-gold block tracking-widest uppercase border-t border-white/5 pt-3">
-                    Impact: {language === 'en' ? activity.stats : activity.stats_gu}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button
-              id="hero-lnk-activities-more"
-              onClick={() => handleApplyCTA('activities')}
-              className="px-8 py-3.5 text-xs text-primary font-bold bg-gold hover:bg-yellow-500 rounded-sm shadow-md cursor-pointer inline-flex items-center gap-2 uppercase tracking-widest"
-            >
-              Examine Our Welfare Portals <ArrowRight className="h-3.5 w-3.5" />
-            </button>
-          </div>
-        </div>
-      </section>
+    <div className="space-y-20 py-20 font-sans bg-bg-warm">
 
       {/* 8. DONATE NOW Call-To-Action Banner (Majestic gold-accented visual anchor) */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

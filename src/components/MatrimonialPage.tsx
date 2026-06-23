@@ -73,13 +73,9 @@ export default function MatrimonialPage() {
 
       {/* Header */}
       <div className="text-center space-y-3 max-w-2xl mx-auto">
-        <span className="text-xs uppercase font-bold text-gold tracking-[0.25em] block">{t('matrimonialEyebrow')}</span>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-primary font-display uppercase tracking-tight text-center animate-fade-in">
           {t('matrimonialTitle')}
         </h1>
-        <p className="text-xs text-gray-500 font-serif leading-relaxed max-w-lg mx-auto">
-          {t('matrimonialSubtitle')}
-        </p>
         <div className="h-0.5 w-12 bg-gold mx-auto mt-2"></div>
       </div>
 

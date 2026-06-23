@@ -9,14 +9,12 @@ import Footer from './components/Footer';
 // Page Views
 import Hero from './components/Hero';
 import TrusteesPage from './components/TrusteesPage';
-import ActivitiesPage from './components/ActivitiesPage';
 import DonationPage from './components/DonationPage';
 import MembershipPage from './components/MembershipPage';
-import HelpRequestPage from './components/HelpRequestPage';
 import MatrimonialPage from './components/MatrimonialPage';
 import JobBoardPage from './components/JobBoardPage';
+import MockBoardExamPage from './components/MockBoardExamPage';
 import NewsPage from './components/NewsPage';
-import AchieversPage from './components/AchieversPage';
 import ContactPage from './components/ContactPage';
 import AdminPanel from './components/AdminPanel';
 
@@ -41,22 +39,18 @@ function AppContent() {
         return <Hero setTab={setTab} />;
       case 'trustees':
         return <TrusteesPage />;
-      case 'activities':
-        return <ActivitiesPage />;
       case 'donation':
         return <DonationPage />;
       case 'membership':
         return <MembershipPage />;
-      case 'help-request':
-        return <HelpRequestPage />;
       case 'matrimonial':
         return <MatrimonialPage />;
       case 'jobs':
         return <JobBoardPage />;
+      case 'mockboard':
+        return <MockBoardExamPage />;
       case 'news':
         return <NewsPage />;
-      case 'achievers':
-        return <AchieversPage />;
       case 'contact':
         return <ContactPage />;
       case 'admin':

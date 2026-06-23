@@ -1,6 +1,6 @@
 import { useLanguage } from '../i18n';
 import { useStore } from '../dbState';
-import logo from '../assets/images/welfare_logo_1780513915221.png';
+import logo from '../assets/images/ssmwslogo.png';
 import { Mail, Phone, MapPin, MessageSquare, Compass, Send } from 'lucide-react';
 
 interface FooterProps {
@@ -30,11 +30,11 @@ export default function Footer({ setTab }: FooterProps) {
           {/* Col 1: About SSMWS */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-sm border border-gold/30">
-                <img 
-                  src={logo} 
-                  alt="SSMWS Emblem" 
-                  className="h-8 w-8 rounded-full"
+              <div className="bg-white p-1.5 rounded-sm border border-gold/30 shadow-sm flex-shrink-0">
+                <img
+                  src={logo}
+                  alt="SSMWS Emblem"
+                  className="h-12 w-auto object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -61,24 +61,6 @@ export default function Footer({ setTab }: FooterProps) {
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
                   <Compass className="h-3 w-3 text-gold" /> Trustees & Committee
-                </button>
-              </li>
-              <li>
-                <button 
-                  id="footer-lnk-activities"
-                  onClick={() => handleNav('activities')} 
-                  className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
-                >
-                  <Compass className="h-3 w-3 text-gold" /> Welfare Programs
-                </button>
-              </li>
-              <li>
-                <button
-                  id="footer-lnk-achievers"
-                  onClick={() => handleNav('achievers')} 
-                  className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
-                >
-                  <Compass className="h-3 w-3 text-gold" /> Community Toppers
                 </button>
               </li>
             </ul>
@@ -109,18 +91,18 @@ export default function Footer({ setTab }: FooterProps) {
                 </button>
               </li>
               <li>
-                <button 
-                  id="footer-lnk-help"
-                  onClick={() => handleNav('help-request')} 
+                <button
+                  id="footer-lnk-mockboard"
+                  onClick={() => handleNav('mockboard')}
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
-                  <Send className="h-3 w-3 text-gold" /> {t('applyHelp')}
+                  <Send className="h-3 w-3 text-gold" /> {t('mockBoardNav')}
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   id="footer-lnk-news"
-                  onClick={() => handleNav('news')} 
+                  onClick={() => handleNav('news')}
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
                   <Send className="h-3 w-3 text-gold" /> Late Announcements
