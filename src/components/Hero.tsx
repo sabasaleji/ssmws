@@ -6,7 +6,7 @@ interface HeroProps {
 }
 
 export default function Hero({ setTab }: HeroProps) {
-  const { language } = useLanguage();
+  const { t } = useLanguage();
 
   const handleApplyCTA = (tab: string) => {
     setTab(tab);
@@ -27,15 +27,15 @@ export default function Hero({ setTab }: HeroProps) {
             
             <div className="inline-flex items-center gap-2 text-gold justify-center">
               <Heart className="h-4 w-4 fill-gold text-gold animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-[0.2em]">Audit Transparency Guarantee</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em]">{t('heroZakatBadge')}</span>
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold font-display leading-tight uppercase">
-              {language === 'en' ? 'Direct Zakat and General Donation Desk' : 'તમારી પાકી ઝકાત અહિયાં મોકલી શકો છો'}
+              {t('heroZakatTitle')}
             </h2>
 
             <p className="text-xs sm:text-sm text-white/80 font-serif max-w-2xl mx-auto leading-relaxed">
-              We pledge to allocate 100% of your Zakat directly to fees of deserving college students, medications of widowed families, and weddings of orphan girls. Check our monthly live lists and obtain receipts instantly.
+              {t('heroZakatBody')}
             </p>
 
             <div className="pt-4 flex flex-wrap justify-center gap-4">
@@ -44,15 +44,15 @@ export default function Hero({ setTab }: HeroProps) {
                 onClick={() => handleApplyCTA('donation')}
                 className="px-8 py-3.5 bg-gold hover:bg-yellow-500 text-primary font-bold uppercase text-xs tracking-widest transition-all cursor-pointer active:scale-95"
               >
-                Assemble Donation Packet
+                {t('heroDonateCta')}
               </button>
-              
+
               <button
                 id="hero-lnk-contact-cta"
                 onClick={() => handleApplyCTA('contact')}
                 className="px-8 py-3.5 border-2 border-white/20 hover:border-gold hover:bg-white/5 text-xs text-white font-bold uppercase tracking-widest transition-all cursor-pointer active:scale-95"
               >
-                Contact Trustees Directly
+                {t('heroContactCta')}
               </button>
             </div>
 

@@ -257,6 +257,38 @@ export const translations = {
     adminJobBoardSubtitle: "Openings posted by the community. They go live immediately — close or delete anything spam, fake, or inappropriate.",
     adminNoJobs: "No job openings have been posted yet.",
 
+    // Hero CTA Banner
+    heroZakatBadge: "Audit Transparency Guarantee",
+    heroZakatTitle: "Direct Zakat and General Donation Desk",
+    heroZakatBody: "We pledge to allocate 100% of your Zakat directly to fees of deserving college students, medications of widowed families, and weddings of orphan girls. Check our monthly live lists and obtain receipts instantly.",
+    heroDonateCta: "Assemble Donation Packet",
+    heroContactCta: "Contact Trustees Directly",
+
+    // Footer
+    footerWelfareTrust: "Welfare Trust",
+    footerTrusteesCommittee: "Trustees & Committee",
+    footerTermsLabel: "Terms & Conditions",
+    footerRefundLabel: "Refund Policy",
+    footerPrivacyLabel: "Privacy Policy",
+    footerGetInvolved: "Get Involved",
+    footerAnnouncements: "Latest Announcements",
+    footerContactOffice: "Contact Office",
+    footerAdminAccess: "Secretariat Admin Access",
+    footerZakatAudit: "Zakat & Public Audited",
+
+    // Donation Page
+    donationPageTitle: "Direct Donation Desk",
+    donationPolicyTitle: "Donation Policy",
+    donationPolicyLine1: "Donations are voluntary and non-refundable.",
+    donationPolicyLine2: "Donations are used for society welfare activities and audited welfare programs.",
+    donationPolicyLine3: "Official name: Sabarkantha Sunni Momin Welfare Society.",
+    donationPolicyLine4: "Registration No: B-182/Sabarkantha, dated 1 March 1994.",
+    donationBankTransfer: "Bank Transfer",
+    donationUpiScan: "UPI Scan Code",
+    donationAccHolder: "A/C Holder:",
+    donationAccNumber: "Account Number",
+    donationIfscCode: "IFSC Code",
+
     // Mock Board Exam (annual education activity)
     mockBoardNav: "Mock Board Exam",
     mockBoardEyebrow: "Annual Welfare Activity",
@@ -541,6 +573,38 @@ export const translations = {
     adminJobBoardSubtitle: "જ્ઞાતિ દ્વારા મૂકાયેલ ખાલી જગ્યાઓ. તે તરત જ લાઈવ થાય છે — સ્પામ, ખોટી કે અયોગ્ય જાહેરાત બંધ કરો અથવા કાઢી નાખો.",
     adminNoJobs: "હજુ સુધી કોઈ નોકરીની જાહેરાત મૂકાઈ નથી.",
 
+    // Hero CTA Banner
+    heroZakatBadge: "ઓડિટ પારદર્શિતાની ગેરંટી",
+    heroZakatTitle: "તમારી પાકી ઝકાત અહિયાં મોકલી શકો છો",
+    heroZakatBody: "અમે પ્રતિજ્ઞા લઈએ છીએ કે તમારી ૧૦૦% ઝકાત સીધી લાયક વિદ્યાર્થીઓની ફી, વિધવા પરિવારોની દવા અને અનાથ દીકરીઓના લગ્ન માટે ઉપયોગ થાય. અમારી માસિક જીવંત યાદી જૂઓ અને ત્વરિત પહોંચ મેળવો.",
+    heroDonateCta: "દાન પેકેટ ભેગો કરો",
+    heroContactCta: "ટ્રસ્ટીઓ સાથે સીધો સંપર્ક",
+
+    // Footer
+    footerWelfareTrust: "વેલ્ફેર ટ્રસ્ટ",
+    footerTrusteesCommittee: "ટ્રસ્ટીઓ અને સમિતિ",
+    footerTermsLabel: "નિયમો અને શરતો",
+    footerRefundLabel: "રિફંડ નીતિ",
+    footerPrivacyLabel: "ગોપનીયતા નીતિ",
+    footerGetInvolved: "જોડાઓ",
+    footerAnnouncements: "તાજેતરની જાહેરાતો",
+    footerContactOffice: "કાર્યાલય સંપર્ક",
+    footerAdminAccess: "સચિવ એડમિન સ્વીકૃત",
+    footerZakatAudit: "ઝકાત અને જાહેર ઓડિટ",
+
+    // Donation Page
+    donationPageTitle: "સીધો દાન ડેસ્ક",
+    donationPolicyTitle: "દાન નીતિ",
+    donationPolicyLine1: "દાન સ્વૈચ્છિક છે અને પરત કરવામાં આવતું નથી.",
+    donationPolicyLine2: "દાન સોસાયટીની કલ્યાણ પ્રવૃત્તિઓ અને ઓડિટ થયેલ કાર્યક્રમો માટે ઉપયોગ થાય છે.",
+    donationPolicyLine3: "અધિકૃત નામ: સાબરકાંઠા સુન્ની મોમીન વેલ્ફેર સોસાયટી.",
+    donationPolicyLine4: "નોંધણી નં: B-182/Sabarkantha, તારીખ 1 March 1994.",
+    donationBankTransfer: "બેંક ટ્રાન્સફર",
+    donationUpiScan: "UPI સ્કેન કોડ",
+    donationAccHolder: "ખાતા ધારક:",
+    donationAccNumber: "ખાતા નંબર",
+    donationIfscCode: "IFSC કોડ",
+
     // Mock Board Exam (વાર્ષિક શૈક્ષણિક પ્રવૃત્તિ)
     mockBoardNav: "મોક બોર્ડ પરીક્ષા",
     mockBoardEyebrow: "વાર્ષિક કલ્યાણ પ્રવૃત્તિ",
@@ -584,7 +648,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem('ssmws_lang');
-    return (saved === 'en' || saved === 'gu') ? saved : 'en';
+    return (saved === 'en' || saved === 'gu') ? saved : 'gu';
   });
 
   const setLanguage = (lang: Language) => {

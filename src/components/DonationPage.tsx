@@ -3,7 +3,7 @@ import { CreditCard, Landmark, ShieldAlert, BadgeInfo } from 'lucide-react';
 import donationQr from '../assets/images/donation_qr.png';
 
 export default function DonationPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 space-y-16 bg-bg-warm font-sans">
@@ -12,7 +12,9 @@ export default function DonationPage() {
       <div className="text-center space-y-3 max-w-2xl mx-auto">
         <span className="text-xs uppercase font-bold text-gold tracking-[0.25em] block">{t('activities')}</span>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-primary font-display uppercase tracking-tight text-center">
-          Direct <span className="italic font-serif text-gold font-normal">Donation</span> Desk
+          {language === 'en' ? (
+            <>Direct <span className="italic font-serif text-gold font-normal">Donation</span> Desk</>
+          ) : t('donationPageTitle')}
         </h1>
         <div className="h-0.5 w-12 bg-gold mx-auto mt-2"></div>
       </div>
@@ -32,13 +34,13 @@ export default function DonationPage() {
         <div className="bg-white border border-gold/20 rounded-sm p-5 md:p-6 shadow-sm space-y-3">
           <div className="flex items-center gap-2 text-primary">
             <BadgeInfo className="h-4 w-4 text-gold" />
-            <h2 className="text-xs font-bold uppercase tracking-widest">Donation Policy</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest">{t('donationPolicyTitle')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-600">
-            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Donations are voluntary and non-refundable.</p>
-            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Donations are used for society welfare activities and audited welfare programs.</p>
-            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Official name: Sabarkantha Sunni Momin Welfare Society.</p>
-            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Registration No: B-182/Sabarkantha, dated 1 March 1994.</p>
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> {t('donationPolicyLine1')}</p>
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> {t('donationPolicyLine2')}</p>
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> {t('donationPolicyLine3')}</p>
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> {t('donationPolicyLine4')}</p>
           </div>
           <p className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold">
             Official contact: sabarkhanthasunnimominwelfare@gmail.com
@@ -53,19 +55,19 @@ export default function DonationPage() {
             {/* Direct Bank Wire */}
             <div className="p-6 border border-gray-100 bg-white space-y-4 shadow-sm rounded-sm">
               <h3 className="text-xs font-bold uppercase tracking-widest text-[#D29B02] flex items-center gap-2 border-b border-gray-100 pb-3 font-display">
-                <Landmark className="h-4 w-4 text-gold" /> Bank Transfer
+                <Landmark className="h-4 w-4 text-gold" /> {t('donationBankTransfer')}
               </h3>
               <div className="space-y-2.5 text-xs text-gray-500">
                 <p className="font-bold text-primary uppercase tracking-wider">{t('donationBankName')}</p>
-                <p><span className="font-semibold text-gray-400 uppercase tracking-widest text-[10px]">A/C Holder:</span> SABARKANTHA SUNNI MOMIN WELFARE SOCIETY</p>
+                <p><span className="font-semibold text-gray-400 uppercase tracking-widest text-[10px]">{t('donationAccHolder')}</span> SABARKANTHA SUNNI MOMIN WELFARE SOCIETY</p>
 
                 <div className="p-2 bg-[#FCFAF7] border border-gray-100 rounded-sm">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-wider leading-none">Account Number</p>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-wider leading-none">{t('donationAccNumber')}</p>
                   <p className="font-mono text-xs font-bold text-primary select-all mt-1">240110100001933</p>
                 </div>
 
                 <div className="p-2 bg-[#FCFAF7] border border-gray-100 rounded-sm">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-wider leading-none">IFSC Code</p>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-wider leading-none">{t('donationIfscCode')}</p>
                   <p className="font-mono text-xs font-bold text-primary select-all mt-1">BKID0002401</p>
                 </div>
               </div>
@@ -74,7 +76,7 @@ export default function DonationPage() {
             {/* UPI QR Code mock layout */}
             <div className="p-6 border border-gray-100 bg-white space-y-4 flex flex-col items-center justify-between text-center shadow-sm rounded-sm">
               <h3 className="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-1.5 border-b border-gray-100 pb-3 w-full justify-center font-display">
-                <CreditCard className="h-4 w-4 text-gold" /> UPI Scan Code
+                <CreditCard className="h-4 w-4 text-gold" /> {t('donationUpiScan')}
               </h3>
               
               <div className="p-3 border border-gray-100 rounded-sm bg-white flex items-center justify-center">

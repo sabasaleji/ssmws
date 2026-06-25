@@ -45,7 +45,7 @@ export default function Footer({ setTab }: FooterProps) {
               </div>
               <div>
                 <h4 className="text-sm font-extrabold text-gold uppercase tracking-widest font-display">{t('societyAbbr')}</h4>
-                <p className="text-[10px] text-gray-400 uppercase tracking-wider leading-none">Welfare Trust</p>
+                <p className="text-[10px] text-gray-400 uppercase tracking-wider leading-none">{t('footerWelfareTrust')}</p>
               </div>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed font-serif">
@@ -65,7 +65,7 @@ export default function Footer({ setTab }: FooterProps) {
                   onClick={() => handleNav('trustees')} 
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
-                  <Compass className="h-3 w-3 text-gold" /> Trustees & Committee
+                  <Compass className="h-3 w-3 text-gold" /> {t('footerTrusteesCommittee')}
                 </button>
               </li>
               <li>
@@ -74,7 +74,7 @@ export default function Footer({ setTab }: FooterProps) {
                   onClick={() => handleNav('terms')}
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
-                  <Compass className="h-3 w-3 text-gold" /> Terms & Conditions
+                  <Compass className="h-3 w-3 text-gold" /> {t('footerTermsLabel')}
                 </button>
               </li>
               <li>
@@ -83,7 +83,7 @@ export default function Footer({ setTab }: FooterProps) {
                   onClick={() => handleNav('refund')}
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
-                  <Compass className="h-3 w-3 text-gold" /> Refund Policy
+                  <Compass className="h-3 w-3 text-gold" /> {t('footerRefundLabel')}
                 </button>
               </li>
               <li>
@@ -92,7 +92,7 @@ export default function Footer({ setTab }: FooterProps) {
                   onClick={() => handleNav('privacy')}
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
-                  <Compass className="h-3 w-3 text-gold" /> Privacy Policy
+                  <Compass className="h-3 w-3 text-gold" /> {t('footerPrivacyLabel')}
                 </button>
               </li>
             </ul>
@@ -101,7 +101,7 @@ export default function Footer({ setTab }: FooterProps) {
           {/* Col 3: Support & Forms */}
           <div>
             <h3 className="text-xs font-bold text-gold uppercase tracking-[0.2em] border-b border-white/5 pb-2.5 mb-4 font-display">
-              Get Involved
+              {t('footerGetInvolved')}
             </h3>
             <ul className="space-y-2.5 text-xs">
               <li>
@@ -137,7 +137,7 @@ export default function Footer({ setTab }: FooterProps) {
                   onClick={() => handleNav('news')}
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
-                  <Send className="h-3 w-3 text-gold" /> Late Announcements
+                  <Send className="h-3 w-3 text-gold" /> {t('footerAnnouncements')}
                 </button>
               </li>
             </ul>
@@ -146,7 +146,7 @@ export default function Footer({ setTab }: FooterProps) {
           {/* Col 4: Reach Out Coordinates */}
           <div className="space-y-4">
             <h3 className="text-xs font-bold text-gold uppercase tracking-[0.2em] border-b border-white/5 pb-2.5 mb-4 font-display">
-              Contact Office
+              {t('footerContactOffice')}
             </h3>
             <div className="space-y-3 text-xs text-gray-400">
               <div className="flex items-start gap-2.5">
@@ -221,10 +221,10 @@ export default function Footer({ setTab }: FooterProps) {
           </div>
           <div className="flex items-center gap-4 text-[11px]">
             <button id="foot-admin-link" onClick={() => handleNav('admin')} className="text-gray-500 hover:text-gold transition-colors uppercase tracking-widest font-bold">
-              Secretariat Admin Access
+              {t('footerAdminAccess')}
             </button>
             <span className="text-white/10">|</span>
-            <span className="text-gold uppercase tracking-wider font-mono">Zakat & Public Audited</span>
+            <span className="text-gold uppercase tracking-wider font-mono">{t('footerZakatAudit')}</span>
           </div>
         </div>
 
