@@ -177,7 +177,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       supabase.from('matrimonials').select('*').order('createdAt', desc),
       supabase.from('donations').select('*').order('date', desc),
       supabase.from('job_openings').select('*').order('createdAt', desc),
-      supabase.from('trustees').select('*').order('createdAt', asc),
+      supabase.from('trustees').select('*').order('sort_order', asc).order('createdAt', asc),
       supabase.from('activities').select('*').order('createdAt', asc),
       supabase.from('achievers').select('*').order('createdAt', asc),
       supabase.from('testimonials').select('*').order('createdAt', asc),
