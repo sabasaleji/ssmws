@@ -155,7 +155,7 @@ export const translations = {
     contactMsg: "Message Text",
     contactOfficeAddress: "Address: AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002",
     contactDirectNumbers: "Helpline Numbers:",
-    contactWhatsAppText: "We are active on WhatsApp for urgent queries. Click below to message our committee directly.",
+    contactWhatsAppText: "This WhatsApp number belongs to our General Secretary, Hidayatulla Yusufbhai Dhapa. Click below to reach him directly for any urgent queries.",
     contactMapTitle: "Our Physical Location Map",
 
     // Admin Panel
@@ -471,7 +471,7 @@ export const translations = {
     contactMsg: "પૂછપરછ સંદેશ",
     contactOfficeAddress: "સરનામું: AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002",
     contactDirectNumbers: "હેલ્પલાઇન નંબર:",
-    contactWhatsAppText: "તાકીદની જરૂરિયાત માટે સીધા વોટ્સએપ પર ક્લિક કરી હોદ્દેદારોનો સંપર્ક કરી શકો છો.",
+    contactWhatsAppText: "આ વોટ્સએપ નંબર આપણા જનરલ સેક્રેટરી, હિદાયતુલ્લા યુસુફભાઈ ધાપાનો છે. તાકીદની જરૂરિયાત માટે સીધો સંપર્ક કરો.",
     contactMapTitle: "અમારું ભૌગોલિક લોકેશન મેપ",
 
     // Admin Panel
