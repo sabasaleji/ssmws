@@ -44,7 +44,7 @@ end $$;
 -- Seed exactly one row (only if the table is empty), with placeholder values.
 insert into contact_info (address, address_gu, phone1, phone2, email, whatsapp)
 select
-  'SSMWS Secretariat, Sunni Momin Mohalla, Sabarkantha Main Bazaar, Gujarat, 383001',
+  'AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002',
   'SSMWS સચિવાલય, સુન્ની મોમીન મહોલ્લા, સાબરકાંઠા મુખ્ય બજાર, ગુજરાત, ૩૮૩૦૦૧',
-  '+91 94261-XXXXX', '+91 98980-XXXXX', 'info@ssmws.org', '919426138382'
+  '+91 94290-84650', '', 'sabarkhanthasunnimominwelfare@gmail.com', '919429084650'
 where not exists (select 1 from contact_info);

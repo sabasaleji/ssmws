@@ -52,7 +52,7 @@ export const translations = {
     aboutMissionTitle: "Our Mission",
     aboutMissionText: "To design and execute transparent, impactful welfare networks including scholarship funds, interest-free assistance, and emergency relief, while fostering strong community networks, skill development, and honoring academic and professional achievers.",
     aboutRegInfoTitle: "Registration and Legality",
-    aboutRegInfoText: "The society is officially registered under the Societies Registration Act, 1860 (Registration No: SSMWS/SAB/2026-03). All operations, donations, and ledger reports are subject to rigorous annual audits, maximizing community trust and transparency.",
+    aboutRegInfoText: "The society is officially registered under the Societies Registration Act, 1860 (Registration No: B-182/Sabarkantha, Registration Date: 1 March 1994). All operations, donations, and ledger reports are subject to rigorous annual audits, maximizing community trust and transparency.",
     aboutTimelineTitle: "Our Milestone Timeline",
 
     // Trustees
@@ -153,7 +153,7 @@ export const translations = {
     contactDetails: "Office Coordinates",
     contactSubject: "Subject of Inquiry",
     contactMsg: "Message Text",
-    contactOfficeAddress: "Address: SSMWS Secretariat, Sunni Momin Mohalla, Sabarkantha Main Bazaar, Gujarat, 383001",
+    contactOfficeAddress: "Address: AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002",
     contactDirectNumbers: "Helpline Numbers:",
     contactWhatsAppText: "We are active on WhatsApp for urgent queries. Click below to message our committee directly.",
     contactMapTitle: "Our Physical Location Map",
@@ -336,7 +336,7 @@ export const translations = {
     aboutMissionTitle: "અમારું લક્ષ્ય",
     aboutMissionText: "શિષ્યવૃત્તિ ભંડોળ, વ્યાજમુક્ત સહાય અને કટોકટીમાં રાહત સહિતની પારદર્શક, અસરકારક સેવા વ્યવસ્થા તૈયાર કરવી, સાથે જ સંગઠન મજબૂત કરીને કૌશલ્ય વિકાસ સાધવો અને તેજસ્વી તારલાઓનું સન્માન કરવું.",
     aboutRegInfoTitle: "ノાંઘણી અને કાયદાકીય વિગત",
-    aboutRegInfoText: "સોસાયટી સત્તાવાર રીતે સોસાયટીઝ રજીસ્ટ્રેશન એક્ટ, ૧૮૬૦ (રજીસ્ટ્રેશન નંબર: SSMWS/SAB/2026-03) હેઠળ નોંધાયેલી છે. તમામ પ્રવૃત્તિઓ, દાન અને ખાતાઓનું વાર્ષિક ઓડિટ કરવામાં આવે છે, જેથી અતુટ જ્ઞાતિ વિશ્વાસ અને પારદર્શિતા જળવાય.",
+    aboutRegInfoText: "સોસાયટી સત્તાવાર રીતે સોસાયટીઝ રજીસ્ટ્રેશન એક્ટ, ૧૮૬૦ (રજીસ્ટ્રેશન નંબર: B-182/Sabarkantha, નોંધણી તારીખ: 1 March 1994) હેઠળ નોંધાયેલી છે. તમામ પ્રવૃત્તિઓ, દાન અને ખાતાઓનું વાર્ષિક ઓડિટ કરવામાં આવે છે, જેથી અતુટ જ્ઞાતિ વિશ્વાસ અને પારદર્શિતા જળવાય.",
     aboutTimelineTitle: "અમારી સીમાચિહ્નરૂપ સિદ્ધિઓ",
 
     // Trustees
@@ -437,7 +437,7 @@ export const translations = {
     contactDetails: "કાર્યાલય વિગત",
     contactSubject: "પૂછપરછનો વિષય",
     contactMsg: "પૂછપરછ સંદેશ",
-    contactOfficeAddress: "સરનામું: SSMWS સચિવાલય, સુન્ની મોમીન મહોલ્લો, સાબરકાંઠા મુખ્ય બજાર, ગુજરાત, ૩૮૩૦૦૧",
+    contactOfficeAddress: "સરનામું: AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002",
     contactDirectNumbers: "હેલ્પલાઇન નંબર:",
     contactWhatsAppText: "તાકીદની જરૂરિયાત માટે સીધા વોટ્સએપ પર ક્લિક કરી હોદ્દેદારોનો સંપર્ક કરી શકો છો.",
     contactMapTitle: "અમારું ભૌગોલિક લોકેશન મેપ",

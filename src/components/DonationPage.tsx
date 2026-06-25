@@ -1,5 +1,5 @@
 import { useLanguage } from '../i18n';
-import { CreditCard, Landmark } from 'lucide-react';
+import { CreditCard, Landmark, ShieldAlert, BadgeInfo } from 'lucide-react';
 import donationQr from '../assets/images/donation_qr.png';
 
 export default function DonationPage() {
@@ -28,6 +28,22 @@ export default function DonationPage() {
       </div>
 
       <div className="max-w-4xl mx-auto">
+
+        <div className="bg-white border border-gold/20 rounded-sm p-5 md:p-6 shadow-sm space-y-3">
+          <div className="flex items-center gap-2 text-primary">
+            <BadgeInfo className="h-4 w-4 text-gold" />
+            <h2 className="text-xs font-bold uppercase tracking-widest">Donation Policy</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-600">
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Donations are voluntary and non-refundable.</p>
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Donations are used for society welfare activities and audited welfare programs.</p>
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Official name: Sabarkantha Sunni Momin Welfare Society.</p>
+            <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Registration No: B-182/Sabarkantha, dated 1 March 1994.</p>
+          </div>
+          <p className="text-[11px] uppercase tracking-[0.2em] text-gray-400 font-bold">
+            Official contact: sabarkhanthasunnimominwelfare@gmail.com
+          </p>
+        </div>
 
         {/* Donation methods */}
         <div className="space-y-8">

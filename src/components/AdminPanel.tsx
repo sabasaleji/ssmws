@@ -861,7 +861,7 @@ export default function AdminPanel({ isAdminLoggedIn }: AdminPanelProps) {
                     <textarea
                       rows={2}
                       className="w-full text-xs px-3.5 py-3 border border-gray-200 rounded-none focus:outline-none focus:border-gold bg-white"
-                      placeholder="SSMWS Secretariat, ... Gujarat, 383001"
+                      placeholder="AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002"
                       value={ciAddress}
                       onChange={e => setCiAddress(e.target.value)}
                     />

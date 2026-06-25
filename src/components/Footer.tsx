@@ -1,7 +1,14 @@
 import { useLanguage } from '../i18n';
-import { useStore } from '../dbState';
 import logo from '../assets/images/ssmwslogo.png';
-import { Mail, Phone, MapPin, MessageSquare, Compass, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare, Compass, Send, Facebook, Youtube, Instagram } from 'lucide-react';
+
+const REGISTERED_OFFICE_ADDRESS = {
+  en: 'AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002',
+  gu: 'એમેના હાઈ સ્કૂલ, પાનપુર, સાવગઢ, ગુજરાત ૩૮૩૦૦૨',
+};
+const HELPLINE_NUMBERS = ['+91 94290-84650'];
+const OFFICE_EMAIL = 'sabarkhanthasunnimominwelfare@gmail.com';
+const WHATSAPP_URL = 'https://wa.me/919429084650';
 
 interface FooterProps {
   setTab: (tab: string) => void;
@@ -9,12 +16,10 @@ interface FooterProps {
 
 export default function Footer({ setTab }: FooterProps) {
   const { t, language } = useLanguage();
-  const { contactInfo: ci } = useStore();
 
-  // Live, admin-editable contact details (with safe fallbacks).
-  const footerAddress = ci ? (language === 'en' ? ci.address : ci.address_gu) : 'SSMWS Secretariat, Sunni Momin Mohalla, Sabarkantha Main Bazaar, Gujarat, 383001';
-  const footerPhones = [ci?.phone1 || '+91 94261-XXXXX', ci?.phone2 || '+91 98980-XXXXX'].filter(Boolean).join(', ');
-  const footerEmail = ci?.email || 'info@ssmws.org';
+  const footerAddress = REGISTERED_OFFICE_ADDRESS[language];
+  const footerPhones = HELPLINE_NUMBERS.join(', ');
+  const footerEmail = OFFICE_EMAIL;
 
   const handleNav = (tab: string) => {
     setTab(tab);
@@ -61,6 +66,33 @@ export default function Footer({ setTab }: FooterProps) {
                   className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
                 >
                   <Compass className="h-3 w-3 text-gold" /> Trustees & Committee
+                </button>
+              </li>
+              <li>
+                <button
+                  id="footer-lnk-terms"
+                  onClick={() => handleNav('terms')}
+                  className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
+                >
+                  <Compass className="h-3 w-3 text-gold" /> Terms & Conditions
+                </button>
+              </li>
+              <li>
+                <button
+                  id="footer-lnk-refund"
+                  onClick={() => handleNav('refund')}
+                  className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
+                >
+                  <Compass className="h-3 w-3 text-gold" /> Refund Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  id="footer-lnk-privacy"
+                  onClick={() => handleNav('privacy')}
+                  className="hover:text-gold flex items-center gap-2 cursor-pointer transition-colors text-gray-400 font-medium uppercase tracking-wider text-[10px]"
+                >
+                  <Compass className="h-3 w-3 text-gold" /> Privacy Policy
                 </button>
               </li>
             </ul>
@@ -136,7 +168,7 @@ export default function Footer({ setTab }: FooterProps) {
             {/* Social Grid */}
             <div className="pt-2 flex gap-2">
               <a 
-                href="https://whatsapp.com" 
+                href={WHATSAPP_URL} 
                 target="_blank" 
                 rel="noreferrer" 
                 className="p-2 rounded-sm bg-primary border border-gold/10 text-gold hover:text-white hover:border-gold transition-all"
@@ -148,28 +180,31 @@ export default function Footer({ setTab }: FooterProps) {
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="p-2.5 rounded-sm bg-primary border border-gold/10 text-gray-300 hover:text-white hover:border-gold text-[10px] font-bold font-mono transition-all leading-none"
+                className="p-2 rounded-sm bg-primary border border-gold/10 text-gray-300 hover:text-white hover:border-gold transition-all"
                 title="Facebook Page"
+                aria-label="Facebook Page"
               >
-                FB
+                <Facebook className="h-3.5 w-3.5" />
               </a>
               <a 
-                href="https://youtube.com" 
+                href="https://youtube.com/@sabarkanthasunnimominwel-jg4fx?si=Ys3Bm1x1SbQOVaS6" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="p-2.5 rounded-sm bg-primary border border-gold/10 text-gray-300 hover:text-white hover:border-gold text-[10px] font-bold font-mono transition-all leading-none"
+                className="p-2 rounded-sm bg-primary border border-gold/10 text-gray-300 hover:text-white hover:border-gold transition-all"
                 title="Youtube Network"
+                aria-label="Youtube Network"
               >
-                YT
+                <Youtube className="h-3.5 w-3.5" />
               </a>
               <a 
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="p-2.5 rounded-sm bg-primary border border-gold/10 text-gray-300 hover:text-white hover:border-gold text-[10px] font-bold font-mono transition-all leading-none"
+                className="p-2 rounded-sm bg-primary border border-gold/10 text-gray-300 hover:text-white hover:border-gold transition-all"
                 title="Instagram Media"
+                aria-label="Instagram Media"
               >
-                IG
+                <Instagram className="h-3.5 w-3.5" />
               </a>
             </div>
           </div>
@@ -178,7 +213,12 @@ export default function Footer({ setTab }: FooterProps) {
 
         {/* Footer Base bar */}
         <div className="mt-16 border-t border-white/5 pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© 2026 Sabarkantha Sunni Momin Welfare Society. {t('allRightsReserved')}</p>
+          <div className="space-y-1">
+            <p>© 2026 Sabarkantha Sunni Momin Welfare Society. {t('allRightsReserved')}</p>
+            <p className="text-[11px] uppercase tracking-[0.2em] text-gray-600">
+              Created by <span className="text-gold font-semibold">EntropyAI</span>
+            </p>
+          </div>
           <div className="flex items-center gap-4 text-[11px]">
             <button id="foot-admin-link" onClick={() => handleNav('admin')} className="text-gray-500 hover:text-gold transition-colors uppercase tracking-widest font-bold">
               Secretariat Admin Access
@@ -192,3 +232,4 @@ export default function Footer({ setTab }: FooterProps) {
     </footer>
   );
 }
+

@@ -1,12 +1,24 @@
 import { useState } from 'react';
 import { useLanguage } from '../i18n';
-import { useStore } from '../dbState';
 import { Mail, Phone, MapPin, MessageSquare, ExternalLink } from 'lucide-react';
 import { VILLAGES, type Village } from '../villages';
 
+const REGISTERED_OFFICE_ADDRESS = {
+  en: 'AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002',
+  gu: 'એમેના હાઈ સ્કૂલ, પાનપુર, સાવગઢ, ગુજરાત ૩૮૩૦૦૨',
+};
+const HELPLINE = {
+  name: 'Hidayatulla Yusufbhai Dhapa',
+  name_gu: 'હિદાયતુલ્લા યુસુફભાઈ ધાપા',
+  role: 'Secretary',
+  role_gu: 'સેક્રેટરી',
+  phone: '+91 94290-84650',
+};
+const OFFICE_EMAIL = 'sabarkhanthasunnimominwelfare@gmail.com';
+const WHATSAPP_NUMBER = '919429084650';
+
 export default function ContactPage() {
   const { t, language } = useLanguage();
-  const store = useStore();
 
   // Interactive "villages we serve" map. Selecting a village lets Google geocode
   // and pin its precise location (keyless ?q=...&output=embed form — no API key,
@@ -18,13 +30,9 @@ export default function ContactPage() {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=${activeVillage ? 13 : 10}&hl=${language}&output=embed`;
   const mapLinkOut = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
 
-  // Live, admin-editable contact details (with safe fallbacks before load/migration).
-  const ci = store.contactInfo;
-  const officeAddress = ci ? (language === 'en' ? ci.address : ci.address_gu) : t('contactOfficeAddress');
-  const phone1 = ci?.phone1 || '+91 94261-XXXXX';
-  const phone2 = ci?.phone2 || '+91 98980-XXXXX';
-  const officeEmail = ci?.email || 'info@ssmws.org';
-  const whatsappNumber = ci?.whatsapp || '919426138382';
+  const officeAddress = REGISTERED_OFFICE_ADDRESS[language];
+  const officeEmail = OFFICE_EMAIL;
+  const whatsappNumber = WHATSAPP_NUMBER;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 space-y-16 bg-bg-warm font-sans animate-fade-in">
@@ -54,17 +62,24 @@ export default function ContactPage() {
             <div className="space-y-5 text-xs text-gray-300 font-serif">
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold flex-shrink-0 mt-0.5" />
-                <span className="leading-relaxed">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(REGISTERED_OFFICE_ADDRESS.en)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed hover:text-gold transition-colors"
+                >
                   {officeAddress}
-                </span>
+                </a>
               </div>
 
               <div className="flex items-start gap-4">
                 <Phone className="h-5 w-5 text-gold flex-shrink-0 mt-0.5" />
                 <div className="space-y-1 font-mono uppercase tracking-wider text-[11px]">
                   <p className="font-sans font-bold text-gold normal-case">{t('contactDirectNumbers')}</p>
-                  <p className="text-white font-bold select-all">{phone1}</p>
-                  {phone2 && <p className="text-white font-bold select-all">{phone2}</p>}
+                  <a href={`tel:${HELPLINE.phone.replace(/[^0-9+]/g, '')}`} className="block text-white font-bold select-all hover:text-gold transition-colors">{HELPLINE.phone}</a>
+                  <p className="font-sans normal-case tracking-normal text-gray-300 text-[10px] leading-tight">
+                    {language === 'en' ? HELPLINE.name : HELPLINE.name_gu} · {language === 'en' ? HELPLINE.role : HELPLINE.role_gu}
+                  </p>
                 </div>
               </div>
 
@@ -94,6 +109,7 @@ export default function ContactPage() {
 
 
       </div>
+
 
       {/* Interactive service-area map — villages SSMWS serves across Sabarkantha */}
       <div className="space-y-6 pt-4">

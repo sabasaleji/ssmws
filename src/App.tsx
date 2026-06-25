@@ -11,6 +11,9 @@ import Hero from './components/Hero';
 import TrusteesPage from './components/TrusteesPage';
 import DonationPage from './components/DonationPage';
 import MembershipPage from './components/MembershipPage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TermsPage from './components/TermsPage';
+import RefundPolicyPage from './components/RefundPolicyPage';
 import MatrimonialPage from './components/MatrimonialPage';
 import JobBoardPage from './components/JobBoardPage';
 import MockBoardExamPage from './components/MockBoardExamPage';
@@ -43,6 +46,12 @@ function AppContent() {
         return <DonationPage />;
       case 'membership':
         return <MembershipPage />;
+      case 'privacy':
+        return <PrivacyPolicyPage />;
+      case 'terms':
+        return <TermsPage />;
+      case 'refund':
+        return <RefundPolicyPage />;
       case 'matrimonial':
         return <MatrimonialPage />;
       case 'jobs':

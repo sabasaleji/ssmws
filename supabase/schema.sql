@@ -386,9 +386,9 @@ insert into donations ("donorName", amount, category, "referenceNo", status, dat
 
 -- Single editable contact-details row (placeholder values; edit in the admin panel).
 insert into contact_info (address, address_gu, phone1, phone2, email, whatsapp) values
-('SSMWS Secretariat, Sunni Momin Mohalla, Sabarkantha Main Bazaar, Gujarat, 383001',
+('AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002',
  'SSMWS સચિવાલય, સુન્ની મોમીન મહોલ્લા, સાબરકાંઠા મુખ્ય બજાર, ગુજરાત, ૩૮૩૦૦૧',
- '+91 94261-XXXXX','+91 98980-XXXXX','info@ssmws.org','919426138382');
+ '+91 94290-84650','','sabarkhanthasunnimominwelfare@gmail.com','919429084650');
 
 -- ============================================================================
 -- Done. Next: create your admin user in Authentication → Users.

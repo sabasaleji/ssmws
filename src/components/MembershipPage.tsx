@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../i18n';
 import { useStore } from '../dbState';
-import { Check } from 'lucide-react';
+import { Check, BadgeInfo, ShieldAlert } from 'lucide-react';
 
 export default function MembershipPage() {
   const { t } = useLanguage();
@@ -66,6 +66,19 @@ export default function MembershipPage() {
           {t('membershipSubtitle')}
         </p>
         <div className="h-0.5 w-12 bg-gold mx-auto mt-2"></div>
+      </div>
+
+      <div className="bg-white border border-gold/20 rounded-sm p-5 md:p-6 shadow-sm space-y-3">
+        <div className="flex items-center gap-2 text-primary">
+          <BadgeInfo className="h-4 w-4 text-gold" />
+          <h2 className="text-xs font-bold uppercase tracking-widest">Membership Policy</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-gray-600">
+          <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Annual membership: ₹100.</p>
+          <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Lifetime membership: ₹2,500.</p>
+          <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Membership is activated after successful payment.</p>
+          <p className="flex items-start gap-2"><ShieldAlert className="h-3.5 w-3.5 text-gold mt-0.5 shrink-0" /> Membership fees are non-refundable and non-transferable.</p>
+        </div>
       </div>
 
       {/* Form Panel */}
