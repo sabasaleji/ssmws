@@ -65,6 +65,7 @@ export const translations = {
     trusteesColNo: "Sr.",
     trusteesColName: "Name",
     trusteesColRegion: "Region",
+    trusteesColPosition: "Position",
     trusteesCount: "Total Members",
 
     // Welfare Activities Category names & details
@@ -381,6 +382,7 @@ export const translations = {
     trusteesColNo: "અ.નં.",
     trusteesColName: "નામ",
     trusteesColRegion: "ગામ / વિસ્તાર",
+    trusteesColPosition: "હોદ્દો",
     trusteesCount: "કુલ સભ્યો",
 
     // Welfare Activities Category names

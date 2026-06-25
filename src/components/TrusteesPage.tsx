@@ -35,6 +35,9 @@ export default function TrusteesPage() {
               <th className="px-4 py-3.5 text-[10px] font-extrabold uppercase tracking-widest text-gold font-display">
                 {t('trusteesColRegion')}
               </th>
+              <th className="px-4 py-3.5 text-[10px] font-extrabold uppercase tracking-widest text-gold font-display">
+                {t('trusteesColPosition')}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -56,6 +59,17 @@ export default function TrusteesPage() {
                       ? (trustee.region || '—')
                       : (trustee.region_gu || trustee.region || '—')}
                   </span>
+                </td>
+                <td className="px-4 py-3.5 text-[11px] align-top">
+                  {trustee.designation ? (
+                    <span className="inline-block px-2 py-0.5 bg-gold/10 text-primary border border-gold/30 text-[10px] font-bold uppercase tracking-wider rounded-sm">
+                      {language === 'en' ? trustee.designation : trustee.designation_gu}
+                    </span>
+                  ) : (
+                    <span className="text-gray-400 font-serif text-[11px]">
+                      {language === 'en' ? 'Committee Member' : 'સમિતિ સભ્ય'}
+                    </span>
+                  )}
                 </td>
               </tr>
             ))}
