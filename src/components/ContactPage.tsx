@@ -5,7 +5,7 @@ import { VILLAGES, type Village } from '../villages';
 
 const REGISTERED_OFFICE_ADDRESS = {
   en: 'AMENA HIGH SCHOOL, Panpur, Savgadh, Gujarat 383002',
-  gu: 'એમેના હાઈ સ્કૂલ, પાનપુર, સાવગઢ, ગુજરાત ૩૮૩૦૦૨',
+  gu: 'આમેના હાઈસ્કુલ, પાનપુર, સાવગઢ, ગુજરાત ૩૮૩૦૦૨',
 };
 const HELPLINE = {
   name: 'Hidayatulla Yusufbhai Dhapa',
